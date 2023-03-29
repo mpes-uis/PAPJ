@@ -1,0 +1,6 @@
+install.packages("RSQLite")
+install.packages("readxl")
+install.packages("dplyr")
+install.packages("rmarkdown")
+install.packages("devtools")
+install.packages("sendmailR")

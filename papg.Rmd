@@ -1,0 +1,967 @@
+---
+title: "Plano de Atuação de Promotorias de Justiça 2022-2023"
+author: "Ministério Público do Estado do Espírito Santo"
+date: "2023-03-21"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+#lembrar de instalar no primeiro uso
+# tinytex::install_tinytex()
+#install.packages(readxl)
+```
+
+```{r inicialização, include=FALSE}
+
+#Leitura do forms como dataframe
+library(readxl)
+df <- read_excel("C:/Users/pedro/OneDrive - Ministerio Publico do Espirito Santo/AGE/PAPJ/PAPJ.xlsx", sheet = "Form1")
+
+# Leitura da linha-formulário atual a partir do banco de dados
+
+linha <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
+
+```
+
+```{r pergunta 1, echo=FALSE, results='asis'}
+elemento <- df[linha,6]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**1 - Cargo: área de atribuição**")}
+```
+
+```{r resposta 1, echo=FALSE, results='asis'}
+elemento <- df[linha,6]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 2, echo=FALSE, results='asis'}
+elemento <- df[linha,7]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**2 - Nome completo**")}
+```
+
+```{r resposta 2, echo=FALSE, results='asis'}
+elemento <- df[linha,7]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 3, echo=FALSE, results='asis'}
+elemento <- df[linha,8]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**3 - Cargo: número do cargo**")}
+```
+
+```{r resposta 3, echo=FALSE, results='asis'}
+elemento <- df[linha,8]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 4, echo=FALSE, results='asis'}
+elemento <- df[linha,9]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**4 - Cargo: município ou comarca**")}
+```
+
+```{r resposta 4, echo=FALSE, results='asis'}
+elemento <- df[linha,9]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 5, echo=FALSE, results='asis'}
+elemento <- df[linha,10]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**5 - Atribuições do cargo ao qual o Plano de Atuação está vinculado.**")}
+```
+
+```{r resposta 5, echo=FALSE, results='asis'}
+elemento <- df[linha,10]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 6, echo=FALSE, results='asis'}
+elemento <- df[linha,11]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**6 - Quadro de pessoal**")}
+```
+
+```{r resposta 6, echo=FALSE, results='asis'}
+elemento <- df[linha,11]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 7, echo=FALSE, results='asis'}
+elemento <- df[linha,12]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**7 - Indique os temas / assuntos mais recorrentes dos procedimentos judiciais em trâmite na Promotoria de Justiça**")}
+```
+
+```{r resposta 7, echo=FALSE, results='asis'}
+elemento <- df[linha,12]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 8, echo=FALSE, results='asis'}
+elemento <- df[linha,13]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**8 - Indique os temas / assuntos mais recorrentes dos procedimentos extrajudiciais em trâmite na Promotoria de Justiça**")}
+```
+
+```{r resposta 8, echo=FALSE, results='asis'}
+elemento <- df[linha,13]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 9, echo=FALSE, results='asis'}
+elemento <- df[linha,14]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**9 - Na sua análise, qual(ais) a(s) principal(ais) causa(s) sociais, culturais, econômicas, dentre outras que podem ser relacionadas às demandas acima identificadas?**")}
+```
+
+```{r resposta 9, echo=FALSE, results='asis'}
+elemento <- df[linha,14]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 10, echo=FALSE, results='asis'}
+elemento <- df[linha,15]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**10 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área Criminal?**")}
+```
+
+```{r resposta 10, echo=FALSE, results='asis'}
+elemento <- df[linha,15]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 11, echo=FALSE, results='asis'}
+elemento <- df[linha,16]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**11 - Qual(ais) estratégia(s) de atuação relacionada(s) à área Criminal irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)? Assinale quantas alternativas quiser.**")}
+```
+
+```{r resposta 11, echo=FALSE, results='asis'}
+elemento <- df[linha,16]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 12, echo=FALSE, results='asis'}
+elemento <- df[linha,17]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento)
+if(x){cat('')} else {cat("**12 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 12, echo=FALSE, results='asis'}
+elemento <- df[linha,17]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 13, echo=FALSE, results='asis'}
+elemento <- df[linha,18]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**13 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 13, echo=FALSE, results='asis'}
+elemento <- df[linha,18]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 14, echo=FALSE, results='asis'}
+elemento <- df[linha,19]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**14 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área da Infância e Juventude?**")}
+```
+
+```{r resposta 14, echo=FALSE, results='asis'}
+elemento <- df[linha,19]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 15, echo=FALSE, results='asis'}
+elemento <- df[linha,20]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento)
+if(x){cat('')} else {if(x){cat('')} else {cat("**15 - Qual(ais) estratégia(s) de atuação relacionada(s) à Infância e Juventude irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)? Assinale quantas alternativas quiser.**")}}
+```
+
+```{r resposta 15, echo=FALSE, results='asis'}
+elemento <- df[linha,20]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 16, echo=FALSE, results='asis'}
+elemento <- df[linha,21]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento)
+if(x){cat('')} else {cat("**16 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 16, echo=FALSE, results='asis'}
+elemento <- df[linha,21]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 17, echo=FALSE, results='asis'}
+elemento <- df[linha,22]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**17 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área da Cidadania?**")}
+```
+
+```{r resposta 17, echo=FALSE, results='asis'}
+elemento <- df[linha,22]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 18, echo=FALSE, results='asis'}
+elemento <- df[linha,23]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**18 - Qual(ais) estratégia(s) de atuação relacionada(s) à Cidadania irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)? Assinale quantas alternativas quiser.**")}
+```
+
+```{r resposta 18, echo=FALSE, results='asis'}
+elemento <- df[linha,23]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 19, echo=FALSE, results='asis'}
+elemento <- df[linha,24]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**19 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 19, echo=FALSE, results='asis'}
+elemento <- df[linha,24]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 20, echo=FALSE, results='asis'}
+elemento <- df[linha,25]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**20 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 20, echo=FALSE, results='asis'}
+elemento <- df[linha,25]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 21, echo=FALSE, results='asis'}
+elemento <- df[linha,26]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**21 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área da Defesa Comunitária?**")}
+```
+
+```{r resposta 21, echo=FALSE, results='asis'}
+elemento <- df[linha,26]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 22, echo=FALSE, results='asis'}
+elemento <- df[linha,27]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**22 - Qual(ais) estratégia(s) de atuação relacionada(s) à Defesa Comunitária irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)? Assinale quantas alternativas quiser.**")}
+```
+
+```{r resposta 22, echo=FALSE, results='asis'}
+elemento <- df[linha,27]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 23, echo=FALSE, results='asis'}
+elemento <- df[linha,28]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**23 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 23, echo=FALSE, results='asis'}
+elemento <- df[linha,28]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 24, echo=FALSE, results='asis'}
+elemento <- df[linha,29]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**24 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 24, echo=FALSE, results='asis'}
+elemento <- df[linha,29]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 25, echo=FALSE, results='asis'}
+elemento <- df[linha,30]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**25 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área de Direitos Humanos?**")}
+```
+
+```{r resposta 25, echo=FALSE, results='asis'}
+elemento <- df[linha,30]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 26, echo=FALSE, results='asis'}
+elemento <- df[linha,31]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**26 - Qual(ais) estratégia(s) de atuação relacionada(s) a Direitos Humanos irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)? Assinale quantas alternativas quiser.**")}
+```
+
+```{r resposta 26, echo=FALSE, results='asis'}
+elemento <- df[linha,31]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 27, echo=FALSE, results='asis'}
+elemento <- df[linha,32]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**27 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 27, echo=FALSE, results='asis'}
+elemento <- df[linha,32]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 28, echo=FALSE, results='asis'}
+elemento <- df[linha,33]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**28 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 28, echo=FALSE, results='asis'}
+elemento <- df[linha,33]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 29, echo=FALSE, results='asis'}
+elemento <- df[linha,34]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**29 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área da Violência Doméstica e Familiar contra a Mulher?**")}
+```
+
+```{r resposta 29, echo=FALSE, results='asis'}
+elemento <- df[linha,34]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 30, echo=FALSE, results='asis'}
+elemento <- df[linha,35]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**30 - Qual(ais) estratégia(s) de atuação relacionada(s) à Defesa do Patrimônio Público irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)? Assinale quantas alternativas quiser.**")}
+```
+
+```{r resposta 30, echo=FALSE, results='asis'}
+elemento <- df[linha,35]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 31, echo=FALSE, results='asis'}
+elemento <- df[linha,36]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**31 - Qual(ais) estratégia(s) de atuação relacionada(s) a Direitos do Consumidor irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)? Assinale quantas alternativas quiser.**")}
+```
+
+```{r resposta 31, echo=FALSE, results='asis'}
+elemento <- df[linha,36]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 32, echo=FALSE, results='asis'}
+elemento <- df[linha,37]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**32 - Qual(ais) estratégia(s) de atuação relacionada(s) à Violência Doméstica e Familiar contra a Mulher irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)?**")}
+```
+
+```{r resposta 32, echo=FALSE, results='asis'}
+elemento <- df[linha,37]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 33, echo=FALSE, results='asis'}
+elemento <- df[linha,38]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**33 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 33, echo=FALSE, results='asis'}
+elemento <- df[linha,38]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 34, echo=FALSE, results='asis'}
+elemento <- df[linha,39]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**34 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 34, echo=FALSE, results='asis'}
+elemento <- df[linha,39]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 35, echo=FALSE, results='asis'}
+elemento <- df[linha,40]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**35 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área Eleitoral?**")}
+```
+
+```{r resposta 35, echo=FALSE, results='asis'}
+elemento <- df[linha,40]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 36, echo=FALSE, results='asis'}
+elemento <- df[linha,41]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**36 - Qual(ais) estratégia(s) de atuação relacionada(s) à área Eleitoral irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)? Assinale quantas alternativas quiser.**")}
+```
+
+```{r resposta 36, echo=FALSE, results='asis'}
+elemento <- df[linha,41]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 37, echo=FALSE, results='asis'}
+elemento <- df[linha,42]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**37 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 37, echo=FALSE, results='asis'}
+elemento <- df[linha,42]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 38, echo=FALSE, results='asis'}
+elemento <- df[linha,43]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**38 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 38, echo=FALSE, results='asis'}
+elemento <- df[linha,43]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 39, echo=FALSE, results='asis'}
+elemento <- df[linha,44]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**39 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área da Defesa do Patrimônio Público?**")}
+```
+
+```{r resposta 39, echo=FALSE, results='asis'}
+elemento <- df[linha,44]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 40, echo=FALSE, results='asis'}
+elemento <- df[linha,45]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**40 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 40, echo=FALSE, results='asis'}
+elemento <- df[linha,45]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 41, echo=FALSE, results='asis'}
+elemento <- df[linha,46]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**41 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 41, echo=FALSE, results='asis'}
+elemento <- df[linha,46]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 42, echo=FALSE, results='asis'}
+elemento <- df[linha,47]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**42 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área de Direitos do Consumidor?**")}
+```
+
+```{r resposta 42, echo=FALSE, results='asis'}
+elemento <- df[linha,47]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 43, echo=FALSE, results='asis'}
+elemento <- df[linha,48]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**43 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 43, echo=FALSE, results='asis'}
+elemento <- df[linha,48]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 44, echo=FALSE, results='asis'}
+elemento <- df[linha,49]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**44 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 44, echo=FALSE, results='asis'}
+elemento <- df[linha,49]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 45, echo=FALSE, results='asis'}
+elemento <- df[linha,50]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**45 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área do Controle externo da atividade policial?**")}
+```
+
+```{r resposta 45, echo=FALSE, results='asis'}
+elemento <- df[linha,50]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 46, echo=FALSE, results='asis'}
+elemento <- df[linha,51]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**46 - Qual(ais) estratégia(s) de atuação relacionada(s) ao Controle externo da atividade policial irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)? Assinale quantas alternativas quiser.**")}
+```
+
+```{r resposta 46, echo=FALSE, results='asis'}
+elemento <- df[linha,51]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 47, echo=FALSE, results='asis'}
+elemento <- df[linha,52]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**47 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 47, echo=FALSE, results='asis'}
+elemento <- df[linha,52]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 48, echo=FALSE, results='asis'}
+elemento <- df[linha,53]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**48 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 48, echo=FALSE, results='asis'}
+elemento <- df[linha,53]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 49, echo=FALSE, results='asis'}
+elemento <- df[linha,54]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**49 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área da Execução Penal?**")}
+```
+
+```{r resposta 49, echo=FALSE, results='asis'}
+elemento <- df[linha,54]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 50, echo=FALSE, results='asis'}
+elemento <- df[linha,55]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**50 - Qual(ais) estratégia(s) de atuação relacionada(s) à Execução Penal irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)? Assinale quantas alternativas quiser.**")}
+```
+
+```{r resposta 50, echo=FALSE, results='asis'}
+elemento <- df[linha,55]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 51, echo=FALSE, results='asis'}
+elemento <- df[linha,56]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**51 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 51, echo=FALSE, results='asis'}
+elemento <- df[linha,56]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 52, echo=FALSE, results='asis'}
+elemento <- df[linha,57]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**52 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 52, echo=FALSE, results='asis'}
+elemento <- df[linha,57]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 53, echo=FALSE, results='asis'}
+elemento <- df[linha,58]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**53 - Qual(ais) estratégia(s) de atuação relacionada(s) à Saúde irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)? Assinale quantas alternativas quiser.**")}
+```
+
+```{r resposta 53, echo=FALSE, results='asis'}
+elemento <- df[linha,58]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 54, echo=FALSE, results='asis'}
+elemento <- df[linha,59]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**54 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 54, echo=FALSE, results='asis'}
+elemento <- df[linha,59]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 55, echo=FALSE, results='asis'}
+elemento <- df[linha,60]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**55 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 55, echo=FALSE, results='asis'}
+elemento <- df[linha,60]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 56, echo=FALSE, results='asis'}
+elemento <- df[linha,61]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**56 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área da Educação?**")}
+```
+
+```{r resposta 56, echo=FALSE, results='asis'}
+elemento <- df[linha,61]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 57, echo=FALSE, results='asis'}
+elemento <- df[linha,62]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**57 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 57, echo=FALSE, results='asis'}
+elemento <- df[linha,62]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 58, echo=FALSE, results='asis'}
+elemento <- df[linha,63]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**58 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 58, echo=FALSE, results='asis'}
+elemento <- df[linha,63]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 59, echo=FALSE, results='asis'}
+elemento <- df[linha,64]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**59 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 59, echo=FALSE, results='asis'}
+elemento <- df[linha,64]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 60, echo=FALSE, results='asis'}
+elemento <- df[linha,65]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**60 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 60, echo=FALSE, results='asis'}
+elemento <- df[linha,65]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 61, echo=FALSE, results='asis'}
+elemento <- df[linha,66]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**61 - Registre no campo a seguir a(s) estratégia(s) específica(s) a ser(em) destacada(s) no Plano de Atuação. Importante constar a iniciativa a ser desenvolvida e o(s) resultado(s) pretendido(s).**")}
+```
+
+```{r resposta 61, echo=FALSE, results='asis'}
+elemento <- df[linha,66]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 62, echo=FALSE, results='asis'}
+elemento <- df[linha,67]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**62 - Para cada estratégia de atuação assinalada na questão anterior, descreva, sucintamente, o que planeja executar no ano de 2023.**")}
+```
+
+```{r resposta 62, echo=FALSE, results='asis'}
+elemento <- df[linha,67]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 63, echo=FALSE, results='asis'}
+elemento <- df[linha,68]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**63 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área da Saúde?**")}
+```
+
+```{r resposta 63, echo=FALSE, results='asis'}
+elemento <- df[linha,68]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 64, echo=FALSE, results='asis'}
+elemento <- df[linha,69]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**64 - Qual(ais) estratégia(s) de atuação relacionada(s) à Educação irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)? Assinale quantas alternativas quiser.**")}
+```
+
+```{r resposta 64, echo=FALSE, results='asis'}
+elemento <- df[linha,69]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 65, echo=FALSE, results='asis'}
+elemento <- df[linha,70]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento)
+if(x){cat('')} else {cat("**65 - Quer incluir em seu Plano de Atuação (PAPJ 22-23), estratégias relacionadas à área do Meio Ambiente?**")}
+```
+
+```{r resposta 65, echo=FALSE, results='asis'}
+
+elemento <- df[linha,70]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 66, echo=FALSE, results='asis'}
+elemento <- df[linha,71]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**66 - Qual(ais) estratégia(s) de atuação relacionada(s) ao Meio Ambiente irá incluir em seu Plano de Atuação de Promotoria de Justiça (PAPJ)? Assinale quantas alternativas quiser.**")}
+```
+
+```{r resposta 66, echo=FALSE, results='asis'}
+elemento <- df[linha,71]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 67, echo=FALSE, results='asis'}
+elemento <- df[linha,72]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento)
+if(x){cat('')} else {cat("**67 - Justifique a escolha da(s) estratégia(s) acima:**")}
+```
+
+```{r resposta 67, echo=FALSE, results='asis'}
+elemento <- df[linha,72]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
