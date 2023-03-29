@@ -1,0 +1,30 @@
+FROM r-base:latest
+
+RUN apt-get update -qq && apt-get -y --no-install-recommends install \
+    libssl-dev \
+    libcurl4-openssl-dev \
+    libxml2-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /App
+
+RUN apt-get update -qq && apt-get -y --no-install-recommends install \
+    git \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN git clone https://github.com/mpes-uis/PAPJ.git ./
+
+COPY config.cfg /App/
+COPY PAPJ.xlsx /App/
+
+RUN Rscript requirements.R
+
+COPY script.sh /App/
+
+RUN cat script.sh | tr -d '\r' >> script2.sh
+
+RUN chmod +x /App/script2.sh
+
+CMD ["sh", "/App/script2.sh"]
