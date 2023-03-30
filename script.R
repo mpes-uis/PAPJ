@@ -36,7 +36,7 @@ valor_atual <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
 
 # Leia o data frame do arquivo Excel
 library(readxl)
-df <- read_excel("PAPJ.xlsx", sheet = "Form1")
+df <- read_excel("data/PAPJ.xlsx", sheet = "Form1")
 
 dbWriteTable(con, "forms", df, overwrite = TRUE)
 
