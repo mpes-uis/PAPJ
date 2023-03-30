@@ -5,7 +5,7 @@ library(sendmailR)
 
 #### Envia o e-mail com authentication and SSL
 sendmail(from="pberger@mpes.mp.br", 
-         to=c("pedropberger@gmail.com"), 
+         to=c(email), 
          subject="Teste final", 
          msg=list(mime_part("Testando"), mime_part(filename_pdf), mime_part(filename_word)), 
          engine = "curl", 
