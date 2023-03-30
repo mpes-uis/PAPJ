@@ -24,7 +24,7 @@ knitr::opts_chunk$set(comment = NA)
 
 # Leitura da linha-formulário atual a partir do banco de dados
 
-linha <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
+#linha <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
 
 ```
 

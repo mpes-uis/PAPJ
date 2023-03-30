@@ -36,7 +36,10 @@ valor_atual <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
 
 # Leia o data frame do arquivo Excel
 library(readxl)
-df <- read_excel("data/PAPJ.xlsx", sheet = "Form1")
+#df <- read_excel("data/PAPJ.xlsx", sheet = "Form1")
+df <- read_excel("D:/docker/PAPJ/data/PAPJ.xlsx", sheet = "Form1")
+
+linha <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
 
 dbWriteTable(con, "forms", df, overwrite = TRUE)
 
@@ -45,7 +48,14 @@ dbWriteTable(con, "forms", df, overwrite = TRUE)
 library(rmarkdown)
 library(dplyr)
 
-print(nrow(df))
+
+email <- (as.character(df[linha, 4]))
+
+#email <- df[linha, 4]
+
+cat("Processando linha", nrow(df), "|", "email:", email)
+
+print(email)
 
 while(nrow(df) >= valor_atual) {
   
@@ -74,6 +84,6 @@ while(nrow(df) >= valor_atual) {
   dbExecute(con, paste("UPDATE configuracoes SET valor = ", valor_atual, "WHERE id = 1"))
 }
 
-# Feche a conexão com o banco de dados
+ # Feche a conexão com o banco de dados
 dbDisconnect(con)
 
