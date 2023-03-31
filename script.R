@@ -1,16 +1,16 @@
-# Instale as bibliotecas necessárias
+##### Instale as bibliotecas necessárias
 
 #install.packages("RSQLite")
 #install.packages("readxl")
 #install.packages("dplyr")
 #install.packages("rmarkdown")
 
-# Iniciando
+#### Iniciando
 
 print("Let's go")
 
 
-# Conecte-se ao banco de dados
+#### Conecte-se ao banco de dados
 
 source("secrets.R")
 
@@ -18,32 +18,36 @@ library(RSQLite)
 
 con <- dbConnect(SQLite(), dbname = "PAPG.sqlite")
 
-# Verifique se a tabela "configuracoes" existe
+#### Verifique se a tabela "configuracoes" existe
 if(!dbExistsTable(con, "configuracoes")) {
-  # Crie a tabela "configuracoes"
+  ## Crie a tabela "configuracoes"
   dbExecute(con, "CREATE TABLE configuracoes (id INTEGER PRIMARY KEY AUTOINCREMENT, valor INTEGER)")
   
-  # Insira o valor 1 na tabela
+  ## Insira o valor 1 na tabela
   dbExecute(con, "INSERT INTO configuracoes (valor) VALUES (1)")
 }
 
-# Grava a tabela no banco de dados
-
-
+#### Grava a tabela no banco de dados
 
 # Leia o valor atual do banco de dados
 valor_atual <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
 
 # Leia o data frame do arquivo Excel
 library(readxl)
-#df <- read_excel("data/PAPJ.xlsx", sheet = "Form1")
+df <- read_excel("data/PAPJ.xlsx", sheet = "Form1")
 df <- read_excel("D:/docker/PAPJ/data/PAPJ.xlsx", sheet = "Form1")
 
 linha <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
 
 dbWriteTable(con, "forms", df, overwrite = TRUE)
 
-# Verifique se o número de linhas do data frame é menor que do banco (situação atual)
+#### Daqui pra baixo a coisa acontece
+
+# 1 - Verifica se o número de linhas do data frame é menor que do banco (situação atual)
+# 2 - Gera o report
+# 3 - Manda o e-mail
+# 4 - Itera no banco
+
 
 library(rmarkdown)
 library(dplyr)
