@@ -49,19 +49,21 @@ library(rmarkdown)
 library(dplyr)
 
 
-email <- (as.character(df[linha, 4]))
-
-#email <- df[linha, 4]
-
-cat("Processando linha", nrow(df), "|", "email:", email)
-
-print(email)
-
 while(nrow(df) >= valor_atual) {
+  
+  linha <- as.character(valor_atual)
   
   report <- "papg.Rmd"
   
-  linha <- as.character(valor_atual)
+  #texto email
+  email <- (as.character(df[linha, 4]))
+  nome <- (as.character(df[linha, 5]))
+  texto <- paste("Excelentíssimo(a) Dr(a) ", nome, ", ", "segue em anexo formulário do Plano de Atuação da Promotoria de Justiça registrado no sistema.", sep="")
+  
+  
+  cat("Processando linha", nrow(df), "|", "email:", email)
+  
+  print(email)
   
   cat("iterando a linha", linha)
   
