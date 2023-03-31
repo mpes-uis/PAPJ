@@ -1,4 +1,4 @@
-FROM r-base:latest
+FROM rocker/rstudio:latest
 
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     libssl-dev \
@@ -14,10 +14,27 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/mpes-uis/PAPJ.git ./
+WORKDIR /App
+
+RUN apt-get update -qq && apt-get -y --no-install-recommends install \
+    net-tools \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /App
+
+RUN openssl s_client -showcerts -servername github.com -connect github.com:443 </dev/null 2>/dev/null | sed -n -e '/BEGIN\ CERTIFICATE/,/END\ CERTIFICATE/ p'  > github-com.pem
+
+RUN cat github-com.pem | sudo tee -a /etc/ssl/certs/ca-certificates.crt
+
+RUN rm -rf /App/
+
+RUN rm -rfv /App/
+
+RUN git clone https://github.com/mpes-uis/PAPJ.git /App/
 
 COPY config.cfg /App/
-COPY PAPJ.xlsx /App/
+COPY data/PAPJ.xlsx /App/data/
 
 RUN Rscript requirements.R
 
