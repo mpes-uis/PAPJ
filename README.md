@@ -18,3 +18,5 @@ Banco de dados SQLite com espelho do arquivo *.xlsx resultante dos formulários
 # To do
 
 Trocar o nome dos arquivos do output de acordo com informações de quem preencheu.
+Criar bash script para automatizar o download do arquivo do onedrive e mover para o container
+Criar pasta compartilhada host/container no docker build
