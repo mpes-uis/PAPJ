@@ -1,5 +1,14 @@
 #### Importando Secrets
 
+# Detalhe, os secrets devem estar no formato config.cfg, lá dentro com as linhas:
+
+# User=Usuario
+# PWD=Senha!!!
+
+#Não existe necessidade de colocar espaço.
+
+
+
 # Leia o conteúdo do arquivo "config.cfg"
 config <- readLines("config.cfg")
 

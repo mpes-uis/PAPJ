@@ -1,0 +1,69 @@
+---
+title: "Plano de Atuação de Promotorias de Justiça 2022-2023"
+author: "Ministério Público do Estado do Espírito Santo"
+date: "2023-03-21"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+#lembrar de instalar no primeiro uso
+# tinytex::install_tinytex()
+#install.packages(readxl)
+```
+
+```{r inicialização, include=FALSE}
+
+#### Conecte-se ao banco de dados
+
+library(RSQLite)
+
+con <- dbConnect(SQLite(), dbname = "PAPG.sqlite")
+
+#### Verifique se a tabela "configuracoes" existe
+if(!dbExistsTable(con, "configuracoes")) {
+  
+  ## Crie a tabela "configuracoes"
+  dbExecute(con, "CREATE TABLE configuracoes (id INTEGER PRIMARY KEY AUTOINCREMENT, valor INTEGER)")
+  
+  ## Insira o valor 1 na tabela
+  dbExecute(con, "INSERT INTO configuracoes (valor) VALUES (1)")
+}
+
+#### Grava a tabela no banco de dados
+
+# Leia o valor atual do banco de dados
+valor_atual <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
+
+# Leia o data frame do arquivo Excel
+library(readxl)
+df <- read_excel("D:/docker/PAPJ/data/PAPJ.xlsx", sheet = "Form1")
+
+linha <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
+
+dbWriteTable(con, "forms", df, overwrite = TRUE)
+
+
+
+```
+
+
+
+```{r pergunta 1, echo=FALSE, results='asis'}
+elemento <- df[linha,6]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**1 - Cargo: área de atribuição**")}
+```
+
+
+```{r resposta 1, echo=FALSE, results='asis'}
+elemento <- df[linha,6]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+

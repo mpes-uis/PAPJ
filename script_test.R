@@ -1,0 +1,111 @@
+#########################################################################
+#
+#      PAPJ
+#
+#########################################################################
+
+# Tentei separar em módulos, mas não ficou perfeito. Mas vou descrever o que cada arquivo faz:
+#   
+#   script.r: É o main da aplicação. Ordena a execução de cada parte
+#   requirements.R: instala no R todos pacotes necessários para aplicação, porém não é acionado pelo script.r
+#   secrets.r: consome o usuário e senha do e-mail
+#   email.R: carrega as configurações de e-mail e anexo da aplicação
+#   papg.Rmd: é onde o arquivo pdf e word é gerado pelo knit
+
+
+##### Instale as bibliotecas necessárias!
+
+#install.packages("RSQLite")
+#install.packages("readxl")
+#install.packages("dplyr")
+#install.packages("rmarkdown")
+
+#### Iniciando
+
+print("Let's go")
+
+#### Read the user and password for the e-mail think
+
+source("secrets.R")
+
+#### Conecte-se ao banco de dados
+
+library(RSQLite)
+
+con <- dbConnect(SQLite(), dbname = "PAPG.sqlite")
+
+#### Verifique se a tabela "configuracoes" existe
+if(!dbExistsTable(con, "configuracoes")) {
+  
+  ## Crie a tabela "configuracoes"
+  dbExecute(con, "CREATE TABLE configuracoes (id INTEGER PRIMARY KEY AUTOINCREMENT, valor INTEGER)")
+  
+  ## Insira o valor 1 na tabela
+  dbExecute(con, "INSERT INTO configuracoes (valor) VALUES (1)")
+}
+
+#### Grava a tabela no banco de dados
+
+# Leia o valor atual do banco de dados
+valor_atual <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
+
+# Leia o data frame do arquivo Excel
+library(readxl)
+df <- read_excel("D:/docker/PAPJ/data/PAPJ.xlsx", sheet = "Form1")
+
+linha <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
+
+dbWriteTable(con, "forms", df, overwrite = TRUE)
+
+#### Daqui pra baixo a coisa acontece
+
+# 1 - Verifica se o número de linhas do data frame é menor que do banco (situação atual)
+# 2 - Gera o report
+# 3 - Manda o e-mail
+# 4 - Itera no banco
+
+
+library(rmarkdown)
+library(dplyr)
+
+
+while(nrow(df) >= valor_atual) {
+  
+  linha <- as.character(valor_atual)
+  
+  report <- "papg.Rmd"
+  
+  #texto email
+  email <- (as.character(df[linha, 4]))
+  nome <- (as.character(df[linha, 5]))
+  texto <- paste("Excelentíssimo(a) Dr(a) ", nome, ", ", "segue em anexo formulário do Plano de Atuação da Promotoria de Justiça registrado no sistema.", sep="")
+  
+  
+  cat("Processando linha", nrow(df), "|", "email:", email)
+  
+  print(email)
+  
+  cat("iterando a linha", linha)
+  
+  render(report, output_format = c("pdf_document", "word_document"), output_file = linha, output_dir = "./output")
+  
+  # Nome para usar de anexo no e-mail
+  filename_pdf <- paste("output/", linha, ".pdf", sep="")
+  filename_word <- paste("output/", linha, ".docx", sep="")
+  
+  Sys.sleep(10)
+  
+  # Some 1 ao valor atual
+  valor_atual <- valor_atual + 1
+  
+  source("email.R")
+  
+  Sys.sleep(10)
+  
+  # Atualize o valor no banco de dados
+  dbExecute(con, paste("UPDATE configuracoes SET valor = ", valor_atual, "WHERE id = 1"))
+}
+
+# Feche a conexão com o banco de dados
+dbDisconnect(con)
+
