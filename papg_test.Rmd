@@ -51,14 +51,6 @@ dbWriteTable(con, "forms", df, overwrite = TRUE)
 ```
 
 
-
-```{r resposta 1, echo=FALSE, results='asis'}
-elemento <- df[linha,1]
-celemento <- gsub(';','  \n',as.character(elemento))
-x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat(celemento)}
-```
-
 ```{r pergunta 1, echo=FALSE, results='asis'}
 elemento <- df[linha,1]
 celemento <- gsub(';','  \n',as.character(elemento))
@@ -67,8 +59,8 @@ if(x){cat('')} else {cat("**ID**")}
 ```
 
 
-```{r resposta 2, echo=FALSE, results='asis'}
-elemento <- df[linha,2]
+```{r resposta 1, echo=FALSE, results='asis'}
+elemento <- df[linha,1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -82,8 +74,8 @@ if(x){cat('')} else {cat("**Hora de início**")}
 ```
 
 
-```{r resposta 3, echo=FALSE, results='asis'}
-elemento <- df[linha,3]
+```{r resposta 2, echo=FALSE, results='asis'}
+elemento <- df[linha,2]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -97,8 +89,8 @@ if(x){cat('')} else {cat("**Hora de conclusão**")}
 ```
 
 
-```{r resposta 4, echo=FALSE, results='asis'}
-elemento <- df[linha,4]
+```{r resposta 3, echo=FALSE, results='asis'}
+elemento <- df[linha,3]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -112,8 +104,8 @@ if(x){cat('')} else {cat("**Email**")}
 ```
 
 
-```{r resposta 5, echo=FALSE, results='asis'}
-elemento <- df[linha,5]
+```{r resposta 4, echo=FALSE, results='asis'}
+elemento <- df[linha,4]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -127,8 +119,8 @@ if(x){cat('')} else {cat("**Nome**")}
 ```
 
 
-```{r resposta 6, echo=FALSE, results='asis'}
-elemento <- df[linha,6]
+```{r resposta 5, echo=FALSE, results='asis'}
+elemento <- df[linha,5]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -142,8 +134,8 @@ if(x){cat('')} else {cat("**Nome completo**")}
 ```
 
 
-```{r resposta 7, echo=FALSE, results='asis'}
-elemento <- df[linha,7]
+```{r resposta 6, echo=FALSE, results='asis'}
+elemento <- df[linha,6]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -157,8 +149,8 @@ if(x){cat('')} else {cat("**Cargo: número do cargo**")}
 ```
 
 
-```{r resposta 8, echo=FALSE, results='asis'}
-elemento <- df[linha,8]
+```{r resposta 7, echo=FALSE, results='asis'}
+elemento <- df[linha,7]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -172,8 +164,8 @@ if(x){cat('')} else {cat("**Cargo: área de atribuição**")}
 ```
 
 
-```{r resposta 9, echo=FALSE, results='asis'}
-elemento <- df[linha,9]
+```{r resposta 8, echo=FALSE, results='asis'}
+elemento <- df[linha,8]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -187,8 +179,8 @@ if(x){cat('')} else {cat("**Cargo: município ou comarca**")}
 ```
 
 
-```{r resposta 10, echo=FALSE, results='asis'}
-elemento <- df[linha,10]
+```{r resposta 9, echo=FALSE, results='asis'}
+elemento <- df[linha,9]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -202,8 +194,8 @@ if(x){cat('')} else {cat("**Atribuições do cargo ao qual o Plano de Atuação 
 ```
 
 
-```{r resposta 11, echo=FALSE, results='asis'}
-elemento <- df[linha,11]
+```{r resposta 10, echo=FALSE, results='asis'}
+elemento <- df[linha,10]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -217,8 +209,8 @@ if(x){cat('')} else {cat("**O cargo informado acima já possui Plano de Atuaçã
 ```
 
 
-```{r resposta 12, echo=FALSE, results='asis'}
-elemento <- df[linha,12]
+```{r resposta 11, echo=FALSE, results='asis'}
+elemento <- df[linha,11]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -232,8 +224,8 @@ if(x){cat('')} else {cat("**Em caso positivo, informe no campo abaixo o procedim
 ```
 
 
-```{r resposta 13, echo=FALSE, results='asis'}
-elemento <- df[linha,13]
+```{r resposta 12, echo=FALSE, results='asis'}
+elemento <- df[linha,12]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -247,8 +239,8 @@ if(x){cat('')} else {cat("**Você entende ser necessário atualizar o Plano de A
 ```
 
 
-```{r resposta 14, echo=FALSE, results='asis'}
-elemento <- df[linha,14]
+```{r resposta 13, echo=FALSE, results='asis'}
+elemento <- df[linha,13]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -262,8 +254,8 @@ if(x){cat('')} else {cat("**Indique os temas / assuntos mais recorrentes dos pro
 ```
 
 
-```{r resposta 15, echo=FALSE, results='asis'}
-elemento <- df[linha,15]
+```{r resposta 14, echo=FALSE, results='asis'}
+elemento <- df[linha,14]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -277,8 +269,8 @@ if(x){cat('')} else {cat("**Indique os temas / assuntos mais recorrentes dos pro
 ```
 
 
-```{r resposta 16, echo=FALSE, results='asis'}
-elemento <- df[linha,16]
+```{r resposta 15, echo=FALSE, results='asis'}
+elemento <- df[linha,15]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -292,8 +284,8 @@ if(x){cat('')} else {cat("**Na sua análise, qual(ais) a(s) principal(ais) causa
 ```
 
 
-```{r resposta 17, echo=FALSE, results='asis'}
-elemento <- df[linha,17]
+```{r resposta 16, echo=FALSE, results='asis'}
+elemento <- df[linha,16]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -307,8 +299,8 @@ if(x){cat('')} else {cat("**Principais problemas identificados**")}
 ```
 
 
-```{r resposta 18, echo=FALSE, results='asis'}
-elemento <- df[linha,18]
+```{r resposta 17, echo=FALSE, results='asis'}
+elemento <- df[linha,17]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -322,8 +314,8 @@ if(x){cat('')} else {cat("**A Ação 1 do Plano de Atuação está relacionada a
 ```
 
 
-```{r resposta 19, echo=FALSE, results='asis'}
-elemento <- df[linha,19]
+```{r resposta 18, echo=FALSE, results='asis'}
+elemento <- df[linha,18]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -337,8 +329,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 20, echo=FALSE, results='asis'}
-elemento <- df[linha,20]
+```{r resposta 19, echo=FALSE, results='asis'}
+elemento <- df[linha,19]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -352,8 +344,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 21, echo=FALSE, results='asis'}
-elemento <- df[linha,21]
+```{r resposta 20, echo=FALSE, results='asis'}
+elemento <- df[linha,20]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -367,8 +359,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 22, echo=FALSE, results='asis'}
-elemento <- df[linha,22]
+```{r resposta 21, echo=FALSE, results='asis'}
+elemento <- df[linha,21]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -382,8 +374,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 23, echo=FALSE, results='asis'}
-elemento <- df[linha,23]
+```{r resposta 22, echo=FALSE, results='asis'}
+elemento <- df[linha,22]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -397,8 +389,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 24, echo=FALSE, results='asis'}
-elemento <- df[linha,24]
+```{r resposta 23, echo=FALSE, results='asis'}
+elemento <- df[linha,23]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -412,8 +404,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 25, echo=FALSE, results='asis'}
-elemento <- df[linha,25]
+```{r resposta 24, echo=FALSE, results='asis'}
+elemento <- df[linha,24]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -427,8 +419,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 26, echo=FALSE, results='asis'}
-elemento <- df[linha,26]
+```{r resposta 25, echo=FALSE, results='asis'}
+elemento <- df[linha,25]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -442,8 +434,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 27, echo=FALSE, results='asis'}
-elemento <- df[linha,27]
+```{r resposta 26, echo=FALSE, results='asis'}
+elemento <- df[linha,26]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -457,8 +449,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 28, echo=FALSE, results='asis'}
-elemento <- df[linha,28]
+```{r resposta 27, echo=FALSE, results='asis'}
+elemento <- df[linha,27]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -472,8 +464,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 29, echo=FALSE, results='asis'}
-elemento <- df[linha,29]
+```{r resposta 28, echo=FALSE, results='asis'}
+elemento <- df[linha,28]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -487,8 +479,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 30, echo=FALSE, results='asis'}
-elemento <- df[linha,30]
+```{r resposta 29, echo=FALSE, results='asis'}
+elemento <- df[linha,29]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -502,8 +494,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 31, echo=FALSE, results='asis'}
-elemento <- df[linha,31]
+```{r resposta 30, echo=FALSE, results='asis'}
+elemento <- df[linha,30]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -517,8 +509,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 32, echo=FALSE, results='asis'}
-elemento <- df[linha,32]
+```{r resposta 31, echo=FALSE, results='asis'}
+elemento <- df[linha,31]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -532,8 +524,8 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 33, echo=FALSE, results='asis'}
-elemento <- df[linha,33]
+```{r resposta 32, echo=FALSE, results='asis'}
+elemento <- df[linha,32]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -547,8 +539,8 @@ if(x){cat('')} else {cat("**Descrição da Ação 1**")}
 ```
 
 
-```{r resposta 34, echo=FALSE, results='asis'}
-elemento <- df[linha,34]
+```{r resposta 33, echo=FALSE, results='asis'}
+elemento <- df[linha,33]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -562,8 +554,8 @@ if(x){cat('')} else {cat("**Justificativa para escolha da Ação 1**")}
 ```
 
 
-```{r resposta 35, echo=FALSE, results='asis'}
-elemento <- df[linha,35]
+```{r resposta 34, echo=FALSE, results='asis'}
+elemento <- df[linha,34]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -577,8 +569,8 @@ if(x){cat('')} else {cat("**Objetivo da Ação 1**")}
 ```
 
 
-```{r resposta 36, echo=FALSE, results='asis'}
-elemento <- df[linha,36]
+```{r resposta 35, echo=FALSE, results='asis'}
+elemento <- df[linha,35]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -592,8 +584,8 @@ if(x){cat('')} else {cat("**Resultados esperados da Ação 1**")}
 ```
 
 
-```{r resposta 37, echo=FALSE, results='asis'}
-elemento <- df[linha,37]
+```{r resposta 36, echo=FALSE, results='asis'}
+elemento <- df[linha,36]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -607,8 +599,8 @@ if(x){cat('')} else {cat("**Tipo de atuação:**")}
 ```
 
 
-```{r resposta 38, echo=FALSE, results='asis'}
-elemento <- df[linha,38]
+```{r resposta 37, echo=FALSE, results='asis'}
+elemento <- df[linha,37]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -622,8 +614,8 @@ if(x){cat('')} else {cat("**Data de início da Ação 1**")}
 ```
 
 
-```{r resposta 39, echo=FALSE, results='asis'}
-elemento <- df[linha,39]
+```{r resposta 38, echo=FALSE, results='asis'}
+elemento <- df[linha,38]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -637,8 +629,8 @@ if(x){cat('')} else {cat("**Data de término da Ação 1**")}
 ```
 
 
-```{r resposta 40, echo=FALSE, results='asis'}
-elemento <- df[linha,40]
+```{r resposta 39, echo=FALSE, results='asis'}
+elemento <- df[linha,39]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -652,8 +644,8 @@ if(x){cat('')} else {cat("**Responsável(eis) pela execução da Ação 1**")}
 ```
 
 
-```{r resposta 41, echo=FALSE, results='asis'}
-elemento <- df[linha,41]
+```{r resposta 40, echo=FALSE, results='asis'}
+elemento <- df[linha,40]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -667,8 +659,8 @@ if(x){cat('')} else {cat("**Há outra ação a ser incluída no PAPJ?**")}
 ```
 
 
-```{r resposta 42, echo=FALSE, results='asis'}
-elemento <- df[linha,42]
+```{r resposta 41, echo=FALSE, results='asis'}
+elemento <- df[linha,41]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -682,8 +674,8 @@ if(x){cat('')} else {cat("**A Ação 2 do Plano de Atuação está relacionada a
 ```
 
 
-```{r resposta 43, echo=FALSE, results='asis'}
-elemento <- df[linha,43]
+```{r resposta 42, echo=FALSE, results='asis'}
+elemento <- df[linha,42]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -697,8 +689,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 44, echo=FALSE, results='asis'}
-elemento <- df[linha,44]
+```{r resposta 43, echo=FALSE, results='asis'}
+elemento <- df[linha,43]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -712,8 +704,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 45, echo=FALSE, results='asis'}
-elemento <- df[linha,45]
+```{r resposta 44, echo=FALSE, results='asis'}
+elemento <- df[linha,44]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -727,8 +719,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 46, echo=FALSE, results='asis'}
-elemento <- df[linha,46]
+```{r resposta 45, echo=FALSE, results='asis'}
+elemento <- df[linha,45]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -742,8 +734,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 47, echo=FALSE, results='asis'}
-elemento <- df[linha,47]
+```{r resposta 46, echo=FALSE, results='asis'}
+elemento <- df[linha,46]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -757,8 +749,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 48, echo=FALSE, results='asis'}
-elemento <- df[linha,48]
+```{r resposta 47, echo=FALSE, results='asis'}
+elemento <- df[linha,47]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -772,8 +764,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 49, echo=FALSE, results='asis'}
-elemento <- df[linha,49]
+```{r resposta 48, echo=FALSE, results='asis'}
+elemento <- df[linha,48]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -787,8 +779,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 50, echo=FALSE, results='asis'}
-elemento <- df[linha,50]
+```{r resposta 49, echo=FALSE, results='asis'}
+elemento <- df[linha,49]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -802,8 +794,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 51, echo=FALSE, results='asis'}
-elemento <- df[linha,51]
+```{r resposta 50, echo=FALSE, results='asis'}
+elemento <- df[linha,50]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -817,8 +809,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 52, echo=FALSE, results='asis'}
-elemento <- df[linha,52]
+```{r resposta 51, echo=FALSE, results='asis'}
+elemento <- df[linha,51]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -832,8 +824,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 53, echo=FALSE, results='asis'}
-elemento <- df[linha,53]
+```{r resposta 52, echo=FALSE, results='asis'}
+elemento <- df[linha,52]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -847,8 +839,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 54, echo=FALSE, results='asis'}
-elemento <- df[linha,54]
+```{r resposta 53, echo=FALSE, results='asis'}
+elemento <- df[linha,53]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -862,8 +854,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 55, echo=FALSE, results='asis'}
-elemento <- df[linha,55]
+```{r resposta 54, echo=FALSE, results='asis'}
+elemento <- df[linha,54]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -877,8 +869,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 56, echo=FALSE, results='asis'}
-elemento <- df[linha,56]
+```{r resposta 55, echo=FALSE, results='asis'}
+elemento <- df[linha,55]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -892,8 +884,8 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 ```
 
 
-```{r resposta 57, echo=FALSE, results='asis'}
-elemento <- df[linha,57]
+```{r resposta 56, echo=FALSE, results='asis'}
+elemento <- df[linha,56]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -907,8 +899,8 @@ if(x){cat('')} else {cat("**Descrição da Ação 2**")}
 ```
 
 
-```{r resposta 58, echo=FALSE, results='asis'}
-elemento <- df[linha,58]
+```{r resposta 57, echo=FALSE, results='asis'}
+elemento <- df[linha,57]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -922,8 +914,8 @@ if(x){cat('')} else {cat("**Justificativa para escolha da Ação 2**")}
 ```
 
 
-```{r resposta 59, echo=FALSE, results='asis'}
-elemento <- df[linha,59]
+```{r resposta 58, echo=FALSE, results='asis'}
+elemento <- df[linha,58]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -937,8 +929,8 @@ if(x){cat('')} else {cat("**Objetivo da Ação 2**")}
 ```
 
 
-```{r resposta 60, echo=FALSE, results='asis'}
-elemento <- df[linha,60]
+```{r resposta 59, echo=FALSE, results='asis'}
+elemento <- df[linha,59]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -952,8 +944,8 @@ if(x){cat('')} else {cat("**Resultados esperados da Ação 2**")}
 ```
 
 
-```{r resposta 61, echo=FALSE, results='asis'}
-elemento <- df[linha,61]
+```{r resposta 60, echo=FALSE, results='asis'}
+elemento <- df[linha,60]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -967,8 +959,8 @@ if(x){cat('')} else {cat("**Tipo de atuação:2**")}
 ```
 
 
-```{r resposta 62, echo=FALSE, results='asis'}
-elemento <- df[linha,62]
+```{r resposta 61, echo=FALSE, results='asis'}
+elemento <- df[linha,61]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -982,8 +974,8 @@ if(x){cat('')} else {cat("**Data de início da Ação 2**")}
 ```
 
 
-```{r resposta 63, echo=FALSE, results='asis'}
-elemento <- df[linha,63]
+```{r resposta 62, echo=FALSE, results='asis'}
+elemento <- df[linha,62]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -997,8 +989,8 @@ if(x){cat('')} else {cat("**Data de término da Ação 2**")}
 ```
 
 
-```{r resposta 64, echo=FALSE, results='asis'}
-elemento <- df[linha,64]
+```{r resposta 63, echo=FALSE, results='asis'}
+elemento <- df[linha,63]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -1011,4 +1003,11 @@ x = is.na.data.frame(elemento)
 if(x){cat('')} else {cat("**Responsável(eis) pela execução da Ação 2**")}
 ```
 
+
+```{r resposta 64, echo=FALSE, results='asis'}
+elemento <- df[linha,64]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
 
