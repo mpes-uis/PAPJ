@@ -1,13 +1,7 @@
 library("devtools")
 library(sendmailR)
 
-#texto email
 
-email <- (as.character(df[linha, 4]))
-nome <- (as.character(df[linha, 5]))
-texto <- paste("Exmo(a) Dr(a) ", nome, ", ", "segue em anexo formulário do Plano de Atuação da Promotoria de Justiça registrado no sistema.", sep="")
-
-cat("Processando linha", nrow(df), "|", "email:", email)
 
 #### Envia o e-mail com authentication and SSL
 sendmail(from="pberger@mpes.mp.br", 
