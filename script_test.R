@@ -26,7 +26,7 @@ print("Let's go")
 
 #### Read the user and password for the e-mail think
 
-source("secrets.R")
+source("src/secrets.R")
 
 #### Conecte-se ao banco de dados
 
@@ -51,6 +51,7 @@ valor_atual <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
 
 # Leia o data frame do arquivo Excel
 library(readxl)
+
 df <- read_excel("D:/docker/PAPJ/data/PAPJ.xlsx", sheet = "Form1")
 
 linha <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
@@ -98,7 +99,7 @@ while(nrow(df) >= valor_atual) {
   # Some 1 ao valor atual
   valor_atual <- valor_atual + 1
   
-  source("email.R")
+  source("src/email.R")
   
   Sys.sleep(10)
   
