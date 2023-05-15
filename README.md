@@ -13,16 +13,17 @@ O arquivo config.cfg é necessário do diretório raiz com o user e pwd do e-mai
 
 Todos formulários que são encaminhados estão salvos na pasta ./output
 
-Banco de dados SQLite com espelho do arquivo *.xlsx resultante dos formulários
+Banco de dados SQLite com espelho do arquivo *.xlsx resultante dos formulários na pasta ./src
 
-# To do
+# Como rodar
 
-Alterar formulário para o modelo da corregedoria
+Instale o R e o LaTex (ou MikTex para Windows).
 
-Trocar o nome dos arquivos do output de acordo com informações de quem preencheu.
+Crie na pasta raiz um arquivo chamado config.cfg, edite e salve com a seguinte configuração:
 
-Criar bash script para automatizar o download do arquivo do onedrive e mover para o container
+  USER=seuemail@email.com
+  PWD=suasenha
 
-Criar pasta compartilhada host/container no docker build
+Rode o arquivo requirements.R (só precisa na primeira vez para instalar os pacotes)
 
-Colocar em produção
+Rode o arquivo main.R
