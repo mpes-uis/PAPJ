@@ -1,7 +1,6 @@
 ---
-title: "Plano de Atuação de Promotorias de Justiça 2022-2023"
+title: "PLANO DE ATUAÇÃO DE PROMOTORIA DE JUSTIÇA 2023"
 author: "Ministério Público do Estado do Espírito Santo"
-date: "2023-03-21"
 output:
   pdf_document: default
   word_document: default
@@ -50,8 +49,16 @@ knitr::opts_chunk$set(comment = NA)
 
 ```
 
+```{r}
 
-```{r pergunta 1, echo=FALSE, results='asis'}
+cat('***IDENTIFICAÇÃO***')
+
+
+```
+
+
+
+```{r pergunta 1, include=FALSE, results='asis'}
 elemento <- df[linha,1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
@@ -59,14 +66,14 @@ if(x){cat('')} else {cat("**ID**")}
 ```
 
 
-```{r resposta 1, echo=FALSE, results='asis'}
+```{r resposta 1, include=FALSE, results='asis'}
 elemento <- df[linha,1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
-```{r pergunta 2, echo=FALSE, results='asis'}
+```{r pergunta 2, include=FALSE, results='asis'}
 elemento <- df[linha,2]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
@@ -74,14 +81,14 @@ if(x){cat('')} else {cat("**Hora de início**")}
 ```
 
 
-```{r resposta 2, echo=FALSE, results='asis'}
+```{r resposta 2, include=FALSE, results='asis'}
 elemento <- df[linha,2]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
-```{r pergunta 3, echo=FALSE, results='asis'}
+```{r pergunta 3, include=FALSE, results='asis'}
 elemento <- df[linha,3]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
@@ -89,14 +96,14 @@ if(x){cat('')} else {cat("**Hora de conclusão**")}
 ```
 
 
-```{r resposta 3, echo=FALSE, results='asis'}
+```{r resposta 3, include=FALSE, results='asis'}
 elemento <- df[linha,3]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
-```{r pergunta 4, echo=FALSE, results='asis'}
+```{r pergunta 4, include=FALSE, results='asis'}
 elemento <- df[linha,4]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
@@ -104,14 +111,14 @@ if(x){cat('')} else {cat("**Email**")}
 ```
 
 
-```{r resposta 4, echo=FALSE, results='asis'}
+```{r resposta 4, include=FALSE, results='asis'}
 elemento <- df[linha,4]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
-```{r pergunta 5, echo=FALSE, results='asis'}
+```{r pergunta 5, include=FALSE, results='asis'}
 elemento <- df[linha,5]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
@@ -119,7 +126,7 @@ if(x){cat('')} else {cat("**Nome**")}
 ```
 
 
-```{r resposta 5, echo=FALSE, results='asis'}
+```{r resposta 5, include=FALSE, results='asis'}
 elemento <- df[linha,5]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
@@ -535,7 +542,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,33]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Descrição da Ação 1**")}
+if(x){cat('')} else {cat("**Descrição**")}
 ```
 
 
@@ -550,7 +557,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,34]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Justificativa para escolha da Ação 1**")}
+if(x){cat('')} else {cat("**Justificativa**")}
 ```
 
 
@@ -565,7 +572,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,35]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Objetivo da Ação 1**")}
+if(x){cat('')} else {cat("**Objetivo**")}
 ```
 
 
@@ -580,7 +587,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,36]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Resultados esperados da Ação 1**")}
+if(x){cat('')} else {cat("**Resultados esperados**")}
 ```
 
 
@@ -610,7 +617,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,38]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Data de início da Ação 1**")}
+if(x){cat('')} else {cat("**Data de início**")}
 ```
 
 
@@ -625,7 +632,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,39]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Data de término da Ação 1**")}
+if(x){cat('')} else {cat("**Data de término**")}
 ```
 
 
@@ -640,7 +647,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,40]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Responsável(eis) pela execução da Ação 1**")}
+if(x){cat('')} else {cat("**Responsável(eis) pela execução**")}
 ```
 
 
@@ -651,7 +658,7 @@ x = is.na.data.frame(elemento)
 if(x){cat('')} else {cat(celemento)}
 ```
 
-```{r pergunta 41, echo=FALSE, results='asis'}
+```{r pergunta 41, include=FALSE, results='asis'}
 elemento <- df[linha,41]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
@@ -895,7 +902,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,57]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Descrição da Ação 2**")}
+if(x){cat('')} else {cat("**Descrição**")}
 ```
 
 
@@ -910,7 +917,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,58]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Justificativa para escolha da Ação 2**")}
+if(x){cat('')} else {cat("**Justificativa**")}
 ```
 
 
@@ -925,7 +932,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,59]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Objetivo da Ação 2**")}
+if(x){cat('')} else {cat("**Objetivo**")}
 ```
 
 
@@ -940,7 +947,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,60]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Resultados esperados da Ação 2**")}
+if(x){cat('')} else {cat("**Resultados esperados**")}
 ```
 
 
@@ -970,7 +977,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,62]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Data de início da Ação 2**")}
+if(x){cat('')} else {cat("**Data de início**")}
 ```
 
 
@@ -985,7 +992,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,63]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Data de término da Ação 2**")}
+if(x){cat('')} else {cat("**Data de término**")}
 ```
 
 
@@ -1000,7 +1007,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,64]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Responsável(eis) pela execução da Ação 2**")}
+if(x){cat('')} else {cat("**Responsável(eis) pela execução**")}
 ```
 
 
@@ -1009,5 +1016,11 @@ elemento <- df[linha,64]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
+```
+
+
+```{r atencaofinal, echo=FALSE, results='asis'}
+cat('**ATENÇÃO**', '\n', '\n')
+cat('Eventuais recursos extras (pessoal, diárias, passagens, campanhas, aquisições, etc.) destinados à(s) ação(ões) prevista(s) neste Plano de Atuação deverão ser solicitadas e aprovadas em procedimento específico.')
 ```
 

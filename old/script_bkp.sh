@@ -1,6 +1,6 @@
 #!/bin/bash
 while [ true ]
 do
-    Rscript script.R
+    Rscript main.R
     sleep 60
 done
