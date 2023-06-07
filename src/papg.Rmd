@@ -49,13 +49,7 @@ knitr::opts_chunk$set(comment = NA)
 
 ```
 
-```{r, echo=FALSE, results='asis'}
-cat("<div style='text-align: center;'>IDENTIFICAÇÃO</div>")
-
-
-```
-
-
+# IDENTIFICAÇÃO
 
 ```{r pergunta 1, include=FALSE, results='asis'}
 elemento <- df[linha,1]
