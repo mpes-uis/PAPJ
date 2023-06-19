@@ -3,11 +3,11 @@ Aplicação que gera arquivos de PDF e Word a partir de cada resposta no formul�
 
 # Funcionamento
 
-O conteiner copia os arquivos do Git e roda localmente.
+Salva o arquivo em Excel
 
-A fonte de dados é inserida no storage por meio de DAGs do Apache Airflow e depois processada.
+Copia para um banco
 
-O arquivo config.cfg é necessário do diretório raiz com o user e pwd do e-mail que enviará os formulários em pdf e docx.
+Gera o pdf
 
 # Output
 
