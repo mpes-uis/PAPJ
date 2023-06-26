@@ -11,7 +11,7 @@
 #install.packages("dplyr")
 #install.packages("rmarkdown")
 
-#### Iniciando
+#### Iniciando aplicação
 
 print("Let's go")
 

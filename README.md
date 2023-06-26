@@ -1,6 +1,7 @@
 # PAPJ
 Aplicação que gera arquivos de PDF e Word a partir de cada resposta no formulário do Plano de Atuação das Promotorias de Justiça.
 
+<<<<<<< HEAD
 # Funcionamento
 
 Salva o arquivo em Excel
@@ -9,6 +10,8 @@ Copia para um banco
 
 Gera o pdf
 
+=======
+>>>>>>> 0f47a39f33f43630d813317fd6379a65a580b7dc
 # Output
 
 Todos formulários que são encaminhados estão salvos na pasta ./output
