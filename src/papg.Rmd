@@ -655,7 +655,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,41]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Há outra ação a ser incluída no PAPJ?**")}
+if(x | elemento=="Não"){cat('')} else {cat("**Há outra ação a ser incluída no PAPJ?**")}
 ```
 
 
@@ -663,7 +663,7 @@ if(x){cat('')} else {cat("**Há outra ação a ser incluída no PAPJ?**")}
 elemento <- df[linha,41]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat(celemento)}
+if(x | elemento=="Não"){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 42, echo=FALSE, results='asis'}
