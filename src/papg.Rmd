@@ -2,10 +2,16 @@
 title: "PLANO DE ATUAÇÃO DE PROMOTORIA DE JUSTIÇA 2023"
 author: "Ministério Público do Estado do Espírito Santo"
 output:
-  pdf_document: default
-  word_document: default
   html_document: default
+  word_document: default
+  pdf_document: default
+header-includes:
+  - \usepackage{titling}
+  - \pretitle{\begin{center}\vspace*{-2cm}
+    \includegraphics[width=2in,height=2in]{Logo-MPES.png}\vspace{1cm}\LARGE\\}
+  - \posttitle{\end{center}}
 ---
+
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(comment = NA)
