@@ -190,7 +190,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,10]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Atribuições do cargo ao qual o Plano de Atuação está vinculado:**")}
+if(x){cat('')} else {cat("**Tipo de atuação**")}
 ```
 
 
@@ -201,8 +201,25 @@ x = is.na.data.frame(elemento)
 if(x){cat('')} else {cat(celemento)}
 ```
 
+
+```{r pergunta 10plus, echo=FALSE, results='asis'}
+elemento <- df[linha,10+1]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Atribuições do cargo ao qual o Plano de Atuação está vinculado:**")}
+```
+
+
+```{r resposta 10plus, echo=FALSE, results='asis'}
+elemento <- df[linha,10+1]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+
 ```{r pergunta 11, echo=FALSE, results='asis'}
-elemento <- df[linha,11]
+elemento <- df[linha,11+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**O cargo informado acima já possui Plano de Atuação vigente no ano de 2023 e formalizado?**")}
@@ -210,14 +227,14 @@ if(x){cat('')} else {cat("**O cargo informado acima já possui Plano de Atuaçã
 
 
 ```{r resposta 11, echo=FALSE, results='asis'}
-elemento <- df[linha,11]
+elemento <- df[linha,11+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 12, echo=FALSE, results='asis'}
-elemento <- df[linha,12]
+elemento <- df[linha,12+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Em caso positivo, informe no campo abaixo o procedimento Sei em que o Plano de Atuação está formalizado.**")}
@@ -225,14 +242,14 @@ if(x){cat('')} else {cat("**Em caso positivo, informe no campo abaixo o procedim
 
 
 ```{r resposta 12, echo=FALSE, results='asis'}
-elemento <- df[linha,12]
+elemento <- df[linha,12+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 13, echo=FALSE, results='asis'}
-elemento <- df[linha,13]
+elemento <- df[linha,13+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Você entende ser necessário atualizar o Plano de Atuação informado na pergunta anterior para o período de junho a dezembro de 2023?**")}
@@ -240,14 +257,16 @@ if(x){cat('')} else {cat("**Você entende ser necessário atualizar o Plano de A
 
 
 ```{r resposta 13, echo=FALSE, results='asis'}
-elemento <- df[linha,13]
+elemento <- df[linha,13+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
+# DIAGNÓSTICO
+
 ```{r pergunta 14, echo=FALSE, results='asis'}
-elemento <- df[linha,14]
+elemento <- df[linha,14+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Indique os temas / assuntos mais recorrentes dos procedimentos judiciais em trâmite na Promotoria de Justiça**")}
@@ -255,14 +274,14 @@ if(x){cat('')} else {cat("**Indique os temas / assuntos mais recorrentes dos pro
 
 
 ```{r resposta 14, echo=FALSE, results='asis'}
-elemento <- df[linha,14]
+elemento <- df[linha,14+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 15, echo=FALSE, results='asis'}
-elemento <- df[linha,15]
+elemento <- df[linha,15+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Indique os temas / assuntos mais recorrentes dos procedimentos extrajudiciais em trâmite na Promotoria de Justiça**")}
@@ -270,14 +289,14 @@ if(x){cat('')} else {cat("**Indique os temas / assuntos mais recorrentes dos pro
 
 
 ```{r resposta 15, echo=FALSE, results='asis'}
-elemento <- df[linha,15]
+elemento <- df[linha,15+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 16, echo=FALSE, results='asis'}
-elemento <- df[linha,16]
+elemento <- df[linha,16+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Na sua análise, qual(ais) a(s) principal(ais) causa(s) sociais, culturais, econômicas, dentre outras que podem ser relacionadas às demandas acima identificadas? **")}
@@ -285,14 +304,14 @@ if(x){cat('')} else {cat("**Na sua análise, qual(ais) a(s) principal(ais) causa
 
 
 ```{r resposta 16, echo=FALSE, results='asis'}
-elemento <- df[linha,16]
+elemento <- df[linha,16+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 17, echo=FALSE, results='asis'}
-elemento <- df[linha,17]
+elemento <- df[linha,17+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Principais problemas identificados**")}
@@ -300,14 +319,16 @@ if(x){cat('')} else {cat("**Principais problemas identificados**")}
 
 
 ```{r resposta 17, echo=FALSE, results='asis'}
-elemento <- df[linha,17]
+elemento <- df[linha,17+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
+#PLANEJAMENTO DA PROMOTORIA DE JUSTIÇA
+
 ```{r pergunta 18, echo=FALSE, results='asis'}
-elemento <- df[linha,18]
+elemento <- df[linha,18+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do Plano de Atuação está relacionada a qual área de atuação?**")}
@@ -315,14 +336,14 @@ if(x){cat('')} else {cat("**A Ação 1 do Plano de Atuação está relacionada a
 
 
 ```{r resposta 18, echo=FALSE, results='asis'}
-elemento <- df[linha,18]
+elemento <- df[linha,18+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 19, echo=FALSE, results='asis'}
-elemento <- df[linha,19]
+elemento <- df[linha,19+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada a área Criminal, do PGA 2022-2023?**")}
@@ -330,14 +351,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 19, echo=FALSE, results='asis'}
-elemento <- df[linha,19]
+elemento <- df[linha,19+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 20, echo=FALSE, results='asis'}
-elemento <- df[linha,20]
+elemento <- df[linha,20+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada a área Infância e Juventude, do PGA 2022-2023?**")}
@@ -345,14 +366,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 20, echo=FALSE, results='asis'}
-elemento <- df[linha,20]
+elemento <- df[linha,20+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 21, echo=FALSE, results='asis'}
-elemento <- df[linha,21]
+elemento <- df[linha,21+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Cidadania, do PGA 2022-2023?**")}
@@ -360,14 +381,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 21, echo=FALSE, results='asis'}
-elemento <- df[linha,21]
+elemento <- df[linha,21+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 22, echo=FALSE, results='asis'}
-elemento <- df[linha,22]
+elemento <- df[linha,22+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Defesa Comunitária, do PGA 2022-2023?**")}
@@ -375,14 +396,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 22, echo=FALSE, results='asis'}
-elemento <- df[linha,22]
+elemento <- df[linha,22+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 23, echo=FALSE, results='asis'}
-elemento <- df[linha,23]
+elemento <- df[linha,23+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada a Direitos Humanos, do PGA 2022-2023?**")}
@@ -390,14 +411,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 23, echo=FALSE, results='asis'}
-elemento <- df[linha,23]
+elemento <- df[linha,23+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 24, echo=FALSE, results='asis'}
-elemento <- df[linha,24]
+elemento <- df[linha,24+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Violência Doméstica e Familiar contra a Mulher, do PGA 2022-2023?**")}
@@ -405,14 +426,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 24, echo=FALSE, results='asis'}
-elemento <- df[linha,24]
+elemento <- df[linha,24+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 25, echo=FALSE, results='asis'}
-elemento <- df[linha,25]
+elemento <- df[linha,25+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à área Eleitoral, do PGA 2022-2023?**")}
@@ -420,14 +441,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 25, echo=FALSE, results='asis'}
-elemento <- df[linha,25]
+elemento <- df[linha,25+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 26, echo=FALSE, results='asis'}
-elemento <- df[linha,26]
+elemento <- df[linha,26+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Defesa do Patrimônio Público, do PGA 2022-2023?**")}
@@ -435,14 +456,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 26, echo=FALSE, results='asis'}
-elemento <- df[linha,26]
+elemento <- df[linha,26+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 27, echo=FALSE, results='asis'}
-elemento <- df[linha,27]
+elemento <- df[linha,27+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada a Direitos do Consumidor, do PGA 2022-2023?**")}
@@ -450,14 +471,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 27, echo=FALSE, results='asis'}
-elemento <- df[linha,27]
+elemento <- df[linha,27+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 28, echo=FALSE, results='asis'}
-elemento <- df[linha,28]
+elemento <- df[linha,28+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada ao Controle externo da atividade policial, do PGA 2022-2023?**")}
@@ -465,14 +486,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 28, echo=FALSE, results='asis'}
-elemento <- df[linha,28]
+elemento <- df[linha,28+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 29, echo=FALSE, results='asis'}
-elemento <- df[linha,29]
+elemento <- df[linha,29+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Execução Penal, do PGA 2022-2023?**")}
@@ -480,14 +501,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 29, echo=FALSE, results='asis'}
-elemento <- df[linha,29]
+elemento <- df[linha,29+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 30, echo=FALSE, results='asis'}
-elemento <- df[linha,30]
+elemento <- df[linha,30+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Saúde, do PGA 2022-2023?**")}
@@ -495,14 +516,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 30, echo=FALSE, results='asis'}
-elemento <- df[linha,30]
+elemento <- df[linha,30+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 31, echo=FALSE, results='asis'}
-elemento <- df[linha,31]
+elemento <- df[linha,31+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Educação, do PGA 2022-2023?**")}
@@ -510,14 +531,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 31, echo=FALSE, results='asis'}
-elemento <- df[linha,31]
+elemento <- df[linha,31+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 32, echo=FALSE, results='asis'}
-elemento <- df[linha,32]
+elemento <- df[linha,32+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada ao Meio Ambiente, do PGA 2022-2023?**")}
@@ -525,14 +546,14 @@ if(x){cat('')} else {cat("**A Ação 1 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 32, echo=FALSE, results='asis'}
-elemento <- df[linha,32]
+elemento <- df[linha,32+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 33, echo=FALSE, results='asis'}
-elemento <- df[linha,33]
+elemento <- df[linha,33+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Descrição**")}
@@ -540,14 +561,14 @@ if(x){cat('')} else {cat("**Descrição**")}
 
 
 ```{r resposta 33, echo=FALSE, results='asis'}
-elemento <- df[linha,33]
+elemento <- df[linha,33+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 34, echo=FALSE, results='asis'}
-elemento <- df[linha,34]
+elemento <- df[linha,34+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Justificativa**")}
@@ -555,14 +576,14 @@ if(x){cat('')} else {cat("**Justificativa**")}
 
 
 ```{r resposta 34, echo=FALSE, results='asis'}
-elemento <- df[linha,34]
+elemento <- df[linha,34+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 35, echo=FALSE, results='asis'}
-elemento <- df[linha,35]
+elemento <- df[linha,35+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Objetivo**")}
@@ -570,14 +591,14 @@ if(x){cat('')} else {cat("**Objetivo**")}
 
 
 ```{r resposta 35, echo=FALSE, results='asis'}
-elemento <- df[linha,35]
+elemento <- df[linha,35+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 36, echo=FALSE, results='asis'}
-elemento <- df[linha,36]
+elemento <- df[linha,36+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Resultados esperados**")}
@@ -585,14 +606,14 @@ if(x){cat('')} else {cat("**Resultados esperados**")}
 
 
 ```{r resposta 36, echo=FALSE, results='asis'}
-elemento <- df[linha,36]
+elemento <- df[linha,36+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 37, echo=FALSE, results='asis'}
-elemento <- df[linha,37]
+elemento <- df[linha,37+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Tipo de atuação:**")}
@@ -600,14 +621,14 @@ if(x){cat('')} else {cat("**Tipo de atuação:**")}
 
 
 ```{r resposta 37, echo=FALSE, results='asis'}
-elemento <- df[linha,37]
+elemento <- df[linha,37+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 38, echo=FALSE, results='asis'}
-elemento <- df[linha,38]
+elemento <- df[linha,38+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Data de início**")}
@@ -615,14 +636,14 @@ if(x){cat('')} else {cat("**Data de início**")}
 
 
 ```{r resposta 38, echo=FALSE, results='asis'}
-elemento <- df[linha,38]
+elemento <- df[linha,38+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 39, echo=FALSE, results='asis'}
-elemento <- df[linha,39]
+elemento <- df[linha,39+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Data de término**")}
@@ -630,14 +651,14 @@ if(x){cat('')} else {cat("**Data de término**")}
 
 
 ```{r resposta 39, echo=FALSE, results='asis'}
-elemento <- df[linha,39]
+elemento <- df[linha,39+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 40, echo=FALSE, results='asis'}
-elemento <- df[linha,40]
+elemento <- df[linha,40+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Responsável(eis) pela execução**")}
@@ -645,14 +666,14 @@ if(x){cat('')} else {cat("**Responsável(eis) pela execução**")}
 
 
 ```{r resposta 40, echo=FALSE, results='asis'}
-elemento <- df[linha,40]
+elemento <- df[linha,40+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 41, include=FALSE, results='asis'}
-elemento <- df[linha,41]
+elemento <- df[linha,41+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x | elemento=="Não"){cat('')} else {cat("**Há outra ação a ser incluída no PAPJ?**")}
@@ -660,14 +681,14 @@ if(x | elemento=="Não"){cat('')} else {cat("**Há outra ação a ser incluída 
 
 
 ```{r resposta 41, echo=FALSE, results='asis'}
-elemento <- df[linha,41]
+elemento <- df[linha,41+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x | elemento=="Não"){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 42, echo=FALSE, results='asis'}
-elemento <- df[linha,42]
+elemento <- df[linha,42+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do Plano de Atuação está relacionada a qual área de atuação?**")}
@@ -675,14 +696,14 @@ if(x){cat('')} else {cat("**A Ação 2 do Plano de Atuação está relacionada a
 
 
 ```{r resposta 42, echo=FALSE, results='asis'}
-elemento <- df[linha,42]
+elemento <- df[linha,42+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 43, echo=FALSE, results='asis'}
-elemento <- df[linha,43]
+elemento <- df[linha,43+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada a área Criminal, do PGA 2022-2023?**")}
@@ -690,14 +711,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 43, echo=FALSE, results='asis'}
-elemento <- df[linha,43]
+elemento <- df[linha,43+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 44, echo=FALSE, results='asis'}
-elemento <- df[linha,44]
+elemento <- df[linha,44+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Infância e Juventude, do PGA 2022-2023?**")}
@@ -705,14 +726,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 44, echo=FALSE, results='asis'}
-elemento <- df[linha,44]
+elemento <- df[linha,44+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 45, echo=FALSE, results='asis'}
-elemento <- df[linha,45]
+elemento <- df[linha,45+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Cidadania, do PGA 2022-2023?**")}
@@ -720,14 +741,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 45, echo=FALSE, results='asis'}
-elemento <- df[linha,45]
+elemento <- df[linha,45+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 46, echo=FALSE, results='asis'}
-elemento <- df[linha,46]
+elemento <- df[linha,46+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Defesa Comunitária, do PGA 2022-2023?**")}
@@ -735,14 +756,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 46, echo=FALSE, results='asis'}
-elemento <- df[linha,46]
+elemento <- df[linha,46+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 47, echo=FALSE, results='asis'}
-elemento <- df[linha,47]
+elemento <- df[linha,47+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada a Direitos Humanos, do PGA 2022-2023?**")}
@@ -750,14 +771,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 47, echo=FALSE, results='asis'}
-elemento <- df[linha,47]
+elemento <- df[linha,47+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 48, echo=FALSE, results='asis'}
-elemento <- df[linha,48]
+elemento <- df[linha,48+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Violência Doméstica e Familiar contra a Mulher, do PGA 2022-2023?**")}
@@ -765,14 +786,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 48, echo=FALSE, results='asis'}
-elemento <- df[linha,48]
+elemento <- df[linha,48+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 49, echo=FALSE, results='asis'}
-elemento <- df[linha,49]
+elemento <- df[linha,49+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à área Eleitoral, do PGA 2022-2023?**")}
@@ -780,14 +801,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 49, echo=FALSE, results='asis'}
-elemento <- df[linha,49]
+elemento <- df[linha,49+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 50, echo=FALSE, results='asis'}
-elemento <- df[linha,50]
+elemento <- df[linha,50+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Defesa do Patrimônio Público, do PGA 2022-2023?**")}
@@ -795,14 +816,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 50, echo=FALSE, results='asis'}
-elemento <- df[linha,50]
+elemento <- df[linha,50+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 51, echo=FALSE, results='asis'}
-elemento <- df[linha,51]
+elemento <- df[linha,51+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada a Direitos do Consumidor, do PGA 2022-2023?**")}
@@ -810,14 +831,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 51, echo=FALSE, results='asis'}
-elemento <- df[linha,51]
+elemento <- df[linha,51+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 52, echo=FALSE, results='asis'}
-elemento <- df[linha,52]
+elemento <- df[linha,52+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada ao Controle externo da atividade policial, do PGA 2022-2023?**")}
@@ -825,14 +846,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 52, echo=FALSE, results='asis'}
-elemento <- df[linha,52]
+elemento <- df[linha,52+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 53, echo=FALSE, results='asis'}
-elemento <- df[linha,53]
+elemento <- df[linha,53+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Execução Penal, do PGA 2022-2023?**")}
@@ -840,14 +861,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 53, echo=FALSE, results='asis'}
-elemento <- df[linha,53]
+elemento <- df[linha,53+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 54, echo=FALSE, results='asis'}
-elemento <- df[linha,54]
+elemento <- df[linha,54+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Saúde, do PGA 2022-2023?**")}
@@ -855,14 +876,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 54, echo=FALSE, results='asis'}
-elemento <- df[linha,54]
+elemento <- df[linha,54+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 55, echo=FALSE, results='asis'}
-elemento <- df[linha,55]
+elemento <- df[linha,55+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada à Educação, do PGA 2022-2023?**")}
@@ -870,14 +891,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 55, echo=FALSE, results='asis'}
-elemento <- df[linha,55]
+elemento <- df[linha,55+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 56, echo=FALSE, results='asis'}
-elemento <- df[linha,56]
+elemento <- df[linha,56+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qual diretriz estratégica, relacionada ao Meio Ambiente, do PGA 2022-2023?**")}
@@ -885,14 +906,14 @@ if(x){cat('')} else {cat("**A Ação 2 do seu Plano de Atuação vincula-se a qu
 
 
 ```{r resposta 56, echo=FALSE, results='asis'}
-elemento <- df[linha,56]
+elemento <- df[linha,56+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 57, echo=FALSE, results='asis'}
-elemento <- df[linha,57]
+elemento <- df[linha,57+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Descrição**")}
@@ -900,14 +921,14 @@ if(x){cat('')} else {cat("**Descrição**")}
 
 
 ```{r resposta 57, echo=FALSE, results='asis'}
-elemento <- df[linha,57]
+elemento <- df[linha,57+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 58, echo=FALSE, results='asis'}
-elemento <- df[linha,58]
+elemento <- df[linha,58+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Justificativa**")}
@@ -915,14 +936,14 @@ if(x){cat('')} else {cat("**Justificativa**")}
 
 
 ```{r resposta 58, echo=FALSE, results='asis'}
-elemento <- df[linha,58]
+elemento <- df[linha,58+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 59, echo=FALSE, results='asis'}
-elemento <- df[linha,59]
+elemento <- df[linha,59+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Objetivo**")}
@@ -930,14 +951,14 @@ if(x){cat('')} else {cat("**Objetivo**")}
 
 
 ```{r resposta 59, echo=FALSE, results='asis'}
-elemento <- df[linha,59]
+elemento <- df[linha,59+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 60, echo=FALSE, results='asis'}
-elemento <- df[linha,60]
+elemento <- df[linha,60+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Resultados esperados**")}
@@ -945,14 +966,14 @@ if(x){cat('')} else {cat("**Resultados esperados**")}
 
 
 ```{r resposta 60, echo=FALSE, results='asis'}
-elemento <- df[linha,60]
+elemento <- df[linha,60+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 61, echo=FALSE, results='asis'}
-elemento <- df[linha,61]
+elemento <- df[linha,61+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Tipo de atuação:2**")}
@@ -960,14 +981,14 @@ if(x){cat('')} else {cat("**Tipo de atuação:2**")}
 
 
 ```{r resposta 61, echo=FALSE, results='asis'}
-elemento <- df[linha,61]
+elemento <- df[linha,61+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 62, echo=FALSE, results='asis'}
-elemento <- df[linha,62]
+elemento <- df[linha,62+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Data de início**")}
@@ -975,14 +996,14 @@ if(x){cat('')} else {cat("**Data de início**")}
 
 
 ```{r resposta 62, echo=FALSE, results='asis'}
-elemento <- df[linha,62]
+elemento <- df[linha,62+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 63, echo=FALSE, results='asis'}
-elemento <- df[linha,63]
+elemento <- df[linha,63+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Data de término**")}
@@ -990,14 +1011,14 @@ if(x){cat('')} else {cat("**Data de término**")}
 
 
 ```{r resposta 63, echo=FALSE, results='asis'}
-elemento <- df[linha,63]
+elemento <- df[linha,63+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 64, echo=FALSE, results='asis'}
-elemento <- df[linha,64]
+elemento <- df[linha,64+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat("**Responsável(eis) pela execução**")}
@@ -1005,7 +1026,7 @@ if(x){cat('')} else {cat("**Responsável(eis) pela execução**")}
 
 
 ```{r resposta 64, echo=FALSE, results='asis'}
-elemento <- df[linha,64]
+elemento <- df[linha,64+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
@@ -1015,5 +1036,7 @@ if(x){cat('')} else {cat(celemento)}
 ```{r atencaofinal, echo=FALSE, results='asis'}
 cat('**ATENÇÃO**', '\n', '\n')
 cat('Eventuais recursos extras (pessoal, diárias, passagens, campanhas, aquisições, etc.) destinados à(s) ação(ões) prevista(s) neste Plano de Atuação deverão ser solicitadas e aprovadas em procedimento específico.')
+cat()
+
 ```
 
