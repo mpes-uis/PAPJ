@@ -325,7 +325,7 @@ x = is.na.data.frame(elemento)
 if(x){cat('')} else {cat(celemento)}
 ```
 
-#PLANEJAMENTO DA PROMOTORIA DE JUSTIÇA
+# PLANEJAMENTO DA PROMOTORIA DE JUSTIÇA
 
 ```{r pergunta 18, echo=FALSE, results='asis'}
 elemento <- df[linha,18+1]
@@ -639,6 +639,12 @@ if(x){cat('')} else {cat("**Data de início**")}
 elemento <- df[linha,38+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
+
+valor_unix <- elemento
+valor_numeric <- as.numeric(valor_unix)
+data_hora <- as.POSIXct(valor_numeric, origin = "1970-01-01")
+celemento <- format(data_hora, "%d-%m-%Y")
+
 if(x){cat('')} else {cat(celemento)}
 ```
 
@@ -654,6 +660,12 @@ if(x){cat('')} else {cat("**Data de término**")}
 elemento <- df[linha,39+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
+
+valor_unix <- elemento
+valor_numeric <- as.numeric(valor_unix)
+data_hora <- as.POSIXct(valor_numeric, origin = "1970-01-01")
+celemento <- format(data_hora, "%d-%m-%Y")
+
 if(x){cat('')} else {cat(celemento)}
 ```
 
@@ -990,7 +1002,7 @@ if(x){cat('')} else {cat(celemento)}
 ```{r pergunta 62, echo=FALSE, results='asis'}
 elemento <- df[linha,62+1]
 celemento <- gsub(';','  \n',as.character(elemento))
-x = is.na.data.frame(elemento) 
+x = is.na.data.frame(elemento)
 if(x){cat('')} else {cat("**Data de início**")}
 ```
 
@@ -999,6 +1011,12 @@ if(x){cat('')} else {cat("**Data de início**")}
 elemento <- df[linha,62+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
+
+valor_unix <- elemento
+valor_numeric <- as.numeric(valor_unix)
+data_hora <- as.POSIXct(valor_numeric, origin = "1970-01-01")
+celemento <- format(data_hora, "%d-%m-%Y")
+
 if(x){cat('')} else {cat(celemento)}
 ```
 
@@ -1014,6 +1032,12 @@ if(x){cat('')} else {cat("**Data de término**")}
 elemento <- df[linha,63+1]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
+
+valor_unix <- elemento
+valor_numeric <- as.numeric(valor_unix)
+data_hora <- as.POSIXct(valor_numeric, origin = "1970-01-01")
+celemento <- format(data_hora, "%d-%m-%Y")
+
 if(x){cat('')} else {cat(celemento)}
 ```
 
@@ -1035,8 +1059,15 @@ if(x){cat('')} else {cat(celemento)}
 
 ```{r atencaofinal, echo=FALSE, results='asis'}
 cat('**ATENÇÃO**', '\n', '\n')
-cat('Eventuais recursos extras (pessoal, diárias, passagens, campanhas, aquisições, etc.) destinados à(s) ação(ões) prevista(s) neste Plano de Atuação deverão ser solicitadas e aprovadas em procedimento específico.')
-cat()
+cat('Eventuais recursos extras (pessoal, diárias, passagens, campanhas, aquisições, etc.) destinados à(s) ação(ões) prevista(s) neste Plano de Atuação deverão ser solicitadas e aprovadas em procedimento específico.','\n','\n')
+cat('Data de elaboração: ')
+
+elemento <- df[linha,3]
+valor_unix <- elemento
+valor_numeric <- as.numeric(valor_unix)
+data_hora <- as.POSIXct(valor_numeric, origin = "1970-01-01")
+data <- format(data_hora, "%d-%m-%Y")
+cat(data)
 
 ```
 
