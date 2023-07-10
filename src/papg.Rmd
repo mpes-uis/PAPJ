@@ -333,6 +333,14 @@ if(x){cat('')} else {cat(celemento)}
 
 # PLANEJAMENTO DA PROMOTORIA DE JUSTIÇA
 
+```{r acao1, echo=FALSE, results='asis'}
+elemento <- df[linha,18+1]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat('\n',"**AÇÃO 1**",'\n','\n')}
+```
+
+
 ```{r pergunta 18, echo=FALSE, results='asis'}
 elemento <- df[linha,18+1]
 celemento <- gsub(';','  \n',as.character(elemento))
@@ -704,6 +712,14 @@ celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x | elemento=="Não"){cat('')} else {cat(celemento)}
 ```
+
+```{r acao2, echo=FALSE, results='asis'}
+elemento <- df[linha,42+1]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat('\n',"**AÇÃO 2**",'\n','\n')}
+```
+
 
 ```{r pergunta 42, echo=FALSE, results='asis'}
 elemento <- df[linha,42+1]
