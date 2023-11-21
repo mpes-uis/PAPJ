@@ -1,5 +1,5 @@
 ---
-title: "PLANO DE ATUAÇÃO DE PROMOTORIA DE JUSTIÇA 2024 - DIAGNÓSTICO E IDENTIFICAÇÃO"
+title: "PLANO DE ATUAÇÃO DE PROMOTORIA DE JUSTIÇA - AÇÕES"
 author: "Ministério Público do Estado do Espírito Santo"
 output:
   html_document: default
@@ -121,7 +121,7 @@ x = is.na.data.frame(elemento)
 if(x){cat('')} else {cat(celemento)}
 ```
 
-```{r pergunta 5, include=FALSE, results='asis'}
+```{r pergunta 5, echo=FALSE, results='asis'}
 elemento <- df[linha,5]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
@@ -129,7 +129,7 @@ if(x){cat('')} else {cat("**Nome**")}
 ```
 
 
-```{r resposta 5, include=FALSE, results='asis'}
+```{r resposta 5, echo=FALSE, results='asis'}
 elemento <- df[linha,5]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
@@ -140,7 +140,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,7]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Nome completo**")}
+if(x){cat('')} else {cat("**Área de atuação**")}
 ```
 
 
@@ -152,40 +152,40 @@ if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 7, echo=FALSE, results='asis'}
-elemento <- df[linha,10]
+elemento <- df[linha,8]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Cargo: número do cargo**")}
+if(x){cat('')} else {cat("**A ação do seu Plano de Atuação vincula-se a qual diretriz estratégica?*")}
 ```
 
 
 ```{r resposta 7, echo=FALSE, results='asis'}
-elemento <- df[linha,10]
+elemento <- df[linha,8]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 8, echo=FALSE, results='asis'}
-elemento <- df[linha,11]
+elemento <- df[linha,9]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Cargo: área de atribuição**")}
+if(x){cat('')} else {cat("**A ação do seu Plano de Atuação vincula-se a qual diretriz estratégica?**")}
 ```
 
 
 ```{r resposta 8, echo=FALSE, results='asis'}
-elemento <- df[linha,11]
+elemento <- df[linha,9]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
 if(x){cat('')} else {cat(celemento)}
 ```
 
 ```{r pergunta 9, echo=FALSE, results='asis'}
-elemento <- df[linha,12]
+elemento <- df[linha,10]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Cargo: município ou comarca**")}
+if(x){cat('')} else {cat("**A ação do seu Plano de Atuação vincula-se a qual diretriz estratégica?**")}
 ```
 
 
@@ -200,7 +200,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,13]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Tipo de atuação**")}
+if(x){cat('')} else {cat("**A ação do seu Plano de Atuação vincula-se a qual diretriz estratégica?**")}
 ```
 
 
@@ -216,7 +216,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,14]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Atribuições do cargo ao qual o Plano de Atuação está vinculado:**")}
+if(x){cat('')} else {cat("**A ação do seu Plano de Atuação vincula-se a qual diretriz estratégica?**")}
 ```
 
 
@@ -232,7 +232,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,15]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**O cargo informado acima já possui Plano de Atuação vigente no ano de 2023 e formalizado?**")}
+if(x){cat('')} else {cat("**A ação do seu Plano de Atuação vincula-se a qual diretriz estratégica?**")}
 ```
 
 
@@ -247,7 +247,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,16]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Informe, no campo abaixo, o procedimento Sei em que o Plano de Atuação está formalizado.**")}
+if(x){cat('')} else {cat("**A ação do seu Plano de Atuação vincula-se a qual diretriz estratégica?**")}
 ```
 
 
@@ -262,7 +262,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,17]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Considerando o Planejamento Estratégico MPES 2024-2032, você entende ser necessário atualizar o Plano de Atuação informado na pergunta anterior para o próximo ano?**")}
+if(x){cat('')} else {cat("**A ação do seu Plano de Atuação vincula-se a qual diretriz estratégica?**")}
 ```
 
 
@@ -278,7 +278,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,18]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Indique os temas / assuntos mais recorrentes dos procedimentos judiciais em trâmite na Promotoria de Justiça**")}
+if(x){cat('')} else {cat("**A ação do seu Plano de Atuação vincula-se a qual diretriz estratégica?**")}
 ```
 
 
@@ -293,7 +293,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,19]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Indique os temas / assuntos mais recorrentes dos procedimentos extrajudiciais em trâmite na Promotoria de Justiça**")}
+if(x){cat('')} else {cat("**A ação do seu Plano de Atuação vincula-se a qual diretriz estratégica?**")}
 ```
 
 
@@ -308,7 +308,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,20]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Na sua análise, qual(ais) a(s) principal(ais) causa(s) sociais, culturais, econômicas, dentre outras que podem ser relacionadas às demandas acima identificadas? **")}
+if(x){cat('')} else {cat("**A ação do seu Plano de Atuação vincula-se a qual diretriz estratégica?**")}
 ```
 
 
@@ -323,7 +323,7 @@ if(x){cat('')} else {cat(celemento)}
 elemento <- df[linha,23]
 celemento <- gsub(';','  \n',as.character(elemento))
 x = is.na.data.frame(elemento) 
-if(x){cat('')} else {cat("**Principais problemas identificados**")}
+if(x){cat('')} else {cat("**A ação do seu Plano de Atuação vincula-se a qual diretriz estratégica?**")}
 ```
 
 
@@ -334,6 +334,126 @@ x = is.na.data.frame(elemento)
 if(x){cat('')} else {cat(celemento)}
 ```
 
+
+
+```{r pergunta 18, echo=FALSE, results='asis'}
+elemento <- df[linha,24]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Resultado(s) esperado(s)/objetivo(s)**")}
+```
+
+
+```{r resposta 18, echo=FALSE, results='asis'}
+elemento <- df[linha,24]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+
+```{r pergunta 19, echo=FALSE, results='asis'}
+elemento <- df[linha,25]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Indicador(es)**")}
+```
+
+
+```{r resposta 19, echo=FALSE, results='asis'}
+elemento <- df[linha,25]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+
+```{r pergunta 20, echo=FALSE, results='asis'}
+elemento <- df[linha,26]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Atividade(s)**")}
+```
+
+
+```{r resposta 20, echo=FALSE, results='asis'}
+elemento <- df[linha,26]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+
+```{r pergunta 21, echo=FALSE, results='asis'}
+elemento <- df[linha,27]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Forma(s) de atuação**")}
+```
+
+
+```{r resposta 21, echo=FALSE, results='asis'}
+elemento <- df[linha,27]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+
+```{r pergunta 22, echo=FALSE, results='asis'}
+elemento <- df[linha,28]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Forma(s) de atuação**")}
+```
+
+
+```{r resposta 22, echo=FALSE, results='asis'}
+elemento <- df[linha,28]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+
+```{r pergunta 23, echo=FALSE, results='asis'}
+elemento <- df[linha,29]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Data de início**")}
+```
+
+
+```{r resposta 23, echo=FALSE, results='asis'}
+elemento <- df[linha,29]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+valor_unix <- elemento
+valor_numeric <- as.numeric(valor_unix)
+data_hora <- as.POSIXct(valor_numeric, origin = "1970-01-01")
+celemento <- format(data_hora, "%d-%m-%Y")
+if(x){cat('')} else {cat(celemento)}
+```
+
+
+```{r pergunta 24, echo=FALSE, results='asis'}
+elemento <- df[linha,30]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Data de Término**")}
+```
+
+
+```{r resposta 24, echo=FALSE, results='asis'}
+elemento <- df[linha,30]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+valor_unix <- elemento
+valor_numeric <- as.numeric(valor_unix)
+data_hora <- as.POSIXct(valor_numeric, origin = "1970-01-01")
+celemento <- format(data_hora, "%d-%m-%Y")
+if(x){cat('')} else {cat(celemento)}
+```
 
 ```{r atencaofinal, echo=FALSE, results='asis'}
 cat('**ATENÇÃO**', '\n', '\n')
