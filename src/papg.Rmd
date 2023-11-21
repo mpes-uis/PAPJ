@@ -273,6 +273,7 @@ x = is.na.data.frame(elemento)
 if(x){cat('')} else {cat(celemento)}
 ```
 
+# DIAGNÓSTICO
 
 ```{r pergunta 14, echo=FALSE, results='asis'}
 elemento <- df[linha,18]
