@@ -1,5 +1,5 @@
 ---
-title: "PLANO DE ATUAÇÃO DE PROMOTORIA DE JUSTIÇA 2023"
+title: "PLANO DE ATUAÇÃO DE PROMOTORIA DE JUSTIÇA 2024 - DIAGNÓSTICO E IDENTIFICAÇÃO"
 author: "Ministério Público do Estado do Espírito Santo"
 output:
   html_document: default
@@ -273,6 +273,7 @@ x = is.na.data.frame(elemento)
 if(x){cat('')} else {cat(celemento)}
 ```
 
+# DIAGNÓSTICO
 
 ```{r pergunta 14, echo=FALSE, results='asis'}
 elemento <- df[linha,18]
@@ -334,3 +335,15 @@ x = is.na.data.frame(elemento)
 if(x){cat('')} else {cat(celemento)}
 ```
 
+
+```{r atencaofinal, echo=FALSE, results='asis'}
+cat('** **', '\n', '\n')
+cat(' ','\n','\n')
+cat('Data de elaboração: ')
+elemento <- df[linha,3]
+valor_unix <- elemento
+valor_numeric <- as.numeric(valor_unix)
+data_hora <- as.POSIXct(valor_numeric, origin = "1970-01-01")
+data <- format(data_hora, "%d-%m-%Y")
+cat(data)
+```
